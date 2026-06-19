@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <title>Doces da Colina</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+        <h1>Doces da Colina</h1>
+        
+        <button id="btnCarrinho">Carrinho (<span id="contador">0</span>)
+        </button>
+
+        <p>Bolos e sobremesas por encomenda</p>
+
+        </header>
+
+        <section class="apresentacao">
+            <h2>Doces caseiros por encomenda</h2>
+
+            <p>
+                Na Doces da Colina preparamos bolos e sobremesas caseiras para aniversários, festas e momentos especiais.
+            </p>
+            <p>
+                Escolha os seus favoritos, faça a encomenda online e receba a confirmação através do WhatsApp.
+            </p>
+        </section>
+
+        <main id="produtos"></main>
+       
+        <div id="carrinho"
+        class="carrinho-fechado">
+        <h2>Carrinho</h2>
+
+        <ul id="listaCarrinho"></ul>
+
+        <h3>Total: <span id="total"></span></h3>
+
+        <button id="finalizarEncomenda">Finlizar Encomenda</button>
+
+        <button id="fecharCarrinho">Fechar</button>
+        </div>
+
+        <div id="formularioEncomenda"
+        style="display:none;">
+    
+    <h2>Dados de Encomenda</h2>
+
+    <input type="text" id="nomeCliente" placeholder="Nome" required>
+
+    <input type="text" id="telefoneCliente" placeholder="Telefone" required>
+
+    <input type="text" id="emailCliente" placeholder="Email" required>
+
+    <input type="text" id="moradaCliente" placeholder="Morada de Entrega" required>
+
+    <textarea
+    id="observacoes"
+    placeholder="Observações"></textarea>
+
+    <button id="enviarEncomenda">Enviar Encomenda</button>
+</div>
+
+</body>
+</html>
