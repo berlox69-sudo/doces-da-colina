@@ -51,6 +51,7 @@ const produtos = [
 
     {
         nome: "Cheescake Frutos Vermelhos" ,
+        imagem: "imagens/cheescakefv.jpg",
         categoria: "Cheesecakes e semifrios",
         descrição: "Cheesecake cremoso com uma base crocante e cobertura de frutos vermelhos frescos.",
         tamanhos: {
@@ -71,6 +72,7 @@ const produtos = [
 
     {
         nome: "Semifrio de Café" ,
+        imagem: "imagens/semifriocafe.jpg",
         categoria: "Cheesecakes e semifrios",
         descrição: "Semifrio fresco e cremoso com o sabor intenso de café.",
         tamanhos: {
@@ -91,6 +93,7 @@ const produtos = [
 
     {
         nome: "Tarte de Amêndoa com Caramelo Salgado" ,
+        imagem: "imagens/tarteamendoacs.jpg",
         categoria: "Tartes",
         descrição: "A combinação perfeita entre amêndoa crocante e caramelo salgado.",
         tamanhos: {
@@ -184,7 +187,7 @@ categorias.forEach(categoria => {
     }
 
     card.innerHTML = `
-    
+    <img src="${produto.imagem}" alt="${produto.nome}">
     <h3>${produto.nome}</h3>
     <p>${produto.descrição}</p>
     
@@ -282,11 +285,13 @@ document.getElementById("fecharCarrinho");
 btnCarrinho.addEventListener("click", () => {
 
     carrinhoDiv.classList.remove("carrinho-fechado");
+    btnCarrinho.style.display = "none";
 });
 
 fecharCarrinho.addEventListener("click",
     () => {
         carrinhoDiv.classList.add("carrinho-fechado");
+        btnCarrinho.style.display = "block";
     });
 
 const btnFinalizar = 
