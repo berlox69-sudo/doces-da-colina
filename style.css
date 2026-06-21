@@ -28,14 +28,23 @@ header p{
 
 #btnCarrinho{
     position: fixed;
-    top: 50%;
+    bottom: 20px;
     right: 20px;
-    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background: #8B4513;
+    color: white;
+    font-size: 28px;
+    cursor:pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1000;
     padding:10px 20px;
-    cursor:pointer;
-    border:none;
-    border-radius:5px;
+    
 }
 
 #produtos{
@@ -133,3 +142,80 @@ footer{
 footer p{
     margin:5px 0;
 }
+
+#contador{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #d62828;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 999;
+    transition: transform 0.2s ease;
+}
+
+.btn-whatsapp:hover{
+    transform: scale(1.08);
+}
+
+.btn-whatsapp img{
+    width: 34px;
+    height: 34px;
+}
+
+.personalizado{
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 25px;
+    background: #fdf7f2;
+    border-radius: 15px;
+    border: 2px solid #e7d5c6;
+    text-align: center;
+}
+
+.personalizado h2{
+    margin-bottom: 20px;
+}
+
+.personalizado p{
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.btn-personalizado{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-personalizado:hover{
+    background: #1fa851;
+}
+
