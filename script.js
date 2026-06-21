@@ -160,6 +160,10 @@ const contadorSpan =
 document.getElementById("contador");
 const categorias = [...new Set(produtos.map(produto => produto.categoria))];
 
+let idGlobal = 0;
+
+
+
 categorias.forEach(categoria => {
 
     const titulo =
@@ -173,7 +177,9 @@ categorias.forEach(categoria => {
     produtosDiv.appendChild(secaoCategoria);
 
     produtos.filter(produto => produto.categoria === categoria)
-    .forEach((produto, index) => {
+    .forEach((produto) => {
+
+        const index = idGlobal++;
 
     const card =
     document.createElement("div");
@@ -221,7 +227,6 @@ function adicionarCarrinho(index){
 
     const quantidade =
     parseInt(
-
         document.getElementById(`quantidade-${index}`).value
     );
 
