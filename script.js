@@ -1,6 +1,7 @@
 const produtos = [
     {
         nome: "Bolo de Chocolate" ,
+        imagem: "",
         categoria: "Bolos",
         descrição: "Bolo de chocolate húmido e intenso, perfeito para os amantes de cacau.",
         tamanhos: {
@@ -11,6 +12,7 @@ const produtos = [
 
     {
         nome: "Bolo de Limão" ,
+        imagem: "",
         categoria: "Bolos",
         descrição: "Bolo leve e aromático, com o equilibrio perfeito entre doce e cítrico.",
         tamanhos: {
@@ -21,6 +23,7 @@ const produtos = [
 
     {
         nome: "Red Velvet" ,
+        imagem: "",
         categoria: "Bolos",
         descrição: "Clássico bolo vermelho de textura suave, coberto com delicioso creme de queijo.",
         tamanhos: {
@@ -31,6 +34,7 @@ const produtos = [
 
     {
         nome: "Bolo Mármore" ,
+        imagem: "",
         categoria: "Bolos",
         descrição: "Combinação tradicional de massa de baunilha e chocolate num só bolo.",
         tamanhos: {
@@ -41,6 +45,7 @@ const produtos = [
 
     {
         nome: "Bolo de Bolacha" ,
+        imagem: "",
         categoria: "Bolos",
         descrição: "Bolo delicioso feito com bolachas crocantes, perfeito para os amantes de sabores clássicos.",
         tamanhos: {
@@ -62,6 +67,7 @@ const produtos = [
 
     {
         nome: "Cheescake de Limão" ,
+        imagem: "",
         categoria: "Cheesecakes e semifrios",
         descrição: "Cheesecake refrescante com sabor de limão, perfeita para os amantes de cítricos.",
         tamanhos: {
@@ -83,6 +89,7 @@ const produtos = [
 
     {
         nome: "Tarte de Amêndoa Tradicional" ,
+        imagem: "",
         categoria: "Tartes",
         descrição: "Tarte crocante coberta com amêndoa caramelizada, um clássico irresistível.",
         tamanhos: {
@@ -104,6 +111,7 @@ const produtos = [
 
     {
         nome: "Mousse de Chocolate" ,
+        imagem: "",
         categoria: "Sobremesas",
         descrição: "Mousse leve e aveludada com sabor intenso a chocolate.",
         tamanhos: {
@@ -113,6 +121,7 @@ const produtos = [
 
     {
         nome: "Mousse de Manga" ,
+        imagem: "",
         categoria: "Sobremesas",
         descrição: "Mousse fresca e tropical, preparada com manga de sabor suave.",
         tamanhos: {
@@ -122,6 +131,7 @@ const produtos = [
 
     {
         nome: "Mousse de Maracujá" ,
+        imagem: "",
         categoria: "Sobremesas",
         descrição: "Mousse cremosa com o toque exótico e refrescante do maracujá.",
         tamanhos: {
@@ -131,6 +141,7 @@ const produtos = [
 
     {
         nome: "Baba de Camelo" ,
+        imagem: "",
         categoria: "Sobremesas",
         descrição: "Sobremesa tradicional, cremosa e rica em sabor.",
         tamanhos: {
@@ -140,6 +151,7 @@ const produtos = [
     
     {
         nome: "Pudim de Ovos" ,
+        imagem: "",
         categoria: "Sobremesas",
         descrição: "Pudim caseiro de textura suave e cobertura de caramelo.",
         tamanhos: {
@@ -193,7 +205,7 @@ categorias.forEach(categoria => {
     }
 
     card.innerHTML = `
-    <img src="${produto.imagem}" alt="${produto.nome}">
+    ${produto.imagem ?`<img src="${produto.imagem}" alt="${produto.nome}">`:""}
     <h3>${produto.nome}</h3>
     <p>${produto.descrição}</p>
     
@@ -365,6 +377,12 @@ document.getElementById("enviarEncomenda").addEventListener("click", () => {
     const numeroWhatsApp = "351924735493";
 
     const urlWhatsApp = `https://wa.me/${351924735493}?text=${encodeURIComponent(mensagem)}`;
+
+    
+gtag('event', 'conversion', { 'send_to': 'AW-18271322518/fDuZCMGqrcUcEJaDuYhE',
+    'value': total,
+    'currency': 'EUR'
+}); 
 
     window.open(urlWhatsApp, "_blank");
 
